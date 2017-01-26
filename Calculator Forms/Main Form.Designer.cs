@@ -7,7 +7,7 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox ShowEvaluation;
+        private System.Windows.Forms.RichTextBox ShowEvaluationBox;
         private System.Windows.Forms.Button ButtonValue1;
         private System.Windows.Forms.Button ButtonValue2;
         private System.Windows.Forms.Button ButtonValue3;
@@ -26,11 +26,11 @@
         private System.Windows.Forms.Button ButtonValueAdd;
         private System.Windows.Forms.Button ButtonValueDeletePrevious;
         private System.Windows.Forms.Button ButtonValueDeleteAll;
-        private System.Windows.Forms.Label PlaceHolderLabel;
         private System.Windows.Forms.Button ButtonValueRandom;
-        private System.Windows.Forms.Button ButtonValueParanthesisStart;
-        private System.Windows.Forms.Button ButtonValueParanthesisEnd;
         private System.Windows.Forms.Button ButtonValueSqrt;
+        private System.Windows.Forms.ToolTip ToolTips;
+        private System.ComponentModel.IContainer components;
+        private System.Windows.Forms.Label VersionLabel;
     }
 }
 

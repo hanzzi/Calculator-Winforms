@@ -1,42 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
+using System.Windows.Forms;
 
-namespace Calculator_Console_Application
+namespace Calculator_Forms
 {
     class AdvancedCalculator : Calculator
     {
-        public double Power(double Num1, double Num2)
+        // Calculates the power of Num1 with Num2
+        public double Power()
         {
-            double Value = System.Math.Pow(Num1, Num2);
-            //Program.PreviousResult = Value;
+            double value = Math.Pow(Num1, Num2);
 
-            return Value;
+            return value;
         }
 
-        public double SquareRoot(double Num1)
+        // gets the square root of a number
+        public double SquareRoot()
         {
-            double Value = System.Math.Sqrt(Num1);
-            //Program.PreviousResult = Value;
+            double value = Math.Sqrt(Num1);
 
-            return Value;
+            return value;
         }
 
-        public double Random(double Num1, double Num2)
+        // gets a random number between num1 and num2
+        public double Random()
         {
-            int INum1;
-            int INum2;
+            int iNum1;
+            int iNum2;
             Random rnd = new Random();
-            int.TryParse(Num1.ToString(), out INum1);
-            int.TryParse(Num2.ToString(), out INum2);
 
+            int.TryParse(Num1.ToString(CultureInfo.CurrentCulture), out iNum1);
+            int.TryParse(Num2.ToString(CultureInfo.CurrentCulture), out iNum2);
 
-            double Value = rnd.Next(INum1, INum2);
-            //Program.PreviousResult = Value;
+            double value = rnd.Next(iNum1, iNum2);
 
-            return Value;
+            return value;
+        }
+
+        protected override string CurrentVersion()
+        {
+            return "Advanced Calculator";
         }
     }
 }
