@@ -41,5 +41,7 @@ namespace Calculator_Forms
         {
             return "Advanced Calculator";
         }
+
+        //  Very interesting
     }
 }
