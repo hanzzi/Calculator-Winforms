@@ -19,7 +19,7 @@
         private System.Windows.Forms.Button ButtonValue8;
         private System.Windows.Forms.Button ButtonValue9;
         private System.Windows.Forms.Button ButtonValue0;
-        private System.Windows.Forms.Button ButtonValueComma;
+        private System.Windows.Forms.Button ButtonPower;
         private System.Windows.Forms.Button ButtonValueEquals;
         private System.Windows.Forms.Button ButtonValueMultiply;
         private System.Windows.Forms.Button ButtonValueSubtract;

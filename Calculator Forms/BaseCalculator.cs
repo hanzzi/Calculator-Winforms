@@ -3,12 +3,13 @@ using System.Windows.Forms;
 
 namespace Calculator_Forms
 {
-    class Calculator
+    class BaseCalculator
     {
         // Number 1 and 2 which is used in all of the calculation methods.
         protected double Num1;
         protected double Num2;
 
+        #region Constructors
         public void AssignFirstNumber(double value)
         {
             if (Regex.IsMatch(value.ToString(), "[0-9]"))
@@ -21,6 +22,9 @@ namespace Calculator_Forms
                 Num2 = value;
         }
 
+        #endregion
+
+        #region Formulas
         // Adds two numbers together
         public double Addition()
         { 
@@ -52,6 +56,7 @@ namespace Calculator_Forms
 
             return value;
         }
+        #endregion
 
         // Checks if Character is an operand
         public bool DetermineIfOperand(string character)

@@ -4,8 +4,9 @@ using System.Windows.Forms;
 
 namespace Calculator_Forms
 {
-    class AdvancedCalculator : Calculator
+    class AdvancedCalculator : BaseCalculator
     {
+        #region Formulas
         // Calculates the power of Num1 with Num2
         public double Power()
         {
@@ -36,6 +37,7 @@ namespace Calculator_Forms
 
             return value;
         }
+#endregion
 
         protected override string CurrentVersion()
         {

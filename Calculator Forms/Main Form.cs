@@ -12,6 +12,7 @@ namespace Calculator_Forms
         {
             InitializeComponent();
 
+            // Will only display the AdvancedCalculator 
             AdvancedCalculator calc = new AdvancedCalculator();
             VersionLabel.Text = $"Current Version: {calc.FindCurrentVersion()}";
         }
@@ -20,6 +21,7 @@ namespace Calculator_Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ShowEvaluationBox = new System.Windows.Forms.RichTextBox();
             this.ButtonValue1 = new System.Windows.Forms.Button();
             this.ButtonValue2 = new System.Windows.Forms.Button();
@@ -32,7 +34,7 @@ namespace Calculator_Forms
             this.ButtonValue8 = new System.Windows.Forms.Button();
             this.ButtonValue9 = new System.Windows.Forms.Button();
             this.ButtonValue0 = new System.Windows.Forms.Button();
-            this.ButtonValueComma = new System.Windows.Forms.Button();
+            this.ButtonPower = new System.Windows.Forms.Button();
             this.ButtonValueEquals = new System.Windows.Forms.Button();
             this.ButtonValueMultiply = new System.Windows.Forms.Button();
             this.ButtonValueSubtract = new System.Windows.Forms.Button();
@@ -58,7 +60,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue1
             // 
-            this.ButtonValue1.Location = new System.Drawing.Point(10, 126);
+            this.ButtonValue1.Location = new System.Drawing.Point(12, 126);
             this.ButtonValue1.Name = "ButtonValue1";
             this.ButtonValue1.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue1.TabIndex = 1;
@@ -68,7 +70,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue2
             // 
-            this.ButtonValue2.Location = new System.Drawing.Point(91, 126);
+            this.ButtonValue2.Location = new System.Drawing.Point(93, 126);
             this.ButtonValue2.Name = "ButtonValue2";
             this.ButtonValue2.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue2.TabIndex = 2;
@@ -78,7 +80,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue3
             // 
-            this.ButtonValue3.Location = new System.Drawing.Point(172, 126);
+            this.ButtonValue3.Location = new System.Drawing.Point(174, 126);
             this.ButtonValue3.Name = "ButtonValue3";
             this.ButtonValue3.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue3.TabIndex = 3;
@@ -88,7 +90,7 @@ namespace Calculator_Forms
             // 
             // ButtonValueDivide
             // 
-            this.ButtonValueDivide.Location = new System.Drawing.Point(253, 126);
+            this.ButtonValueDivide.Location = new System.Drawing.Point(255, 126);
             this.ButtonValueDivide.Name = "ButtonValueDivide";
             this.ButtonValueDivide.Size = new System.Drawing.Size(75, 23);
             this.ButtonValueDivide.TabIndex = 4;
@@ -98,7 +100,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue4
             // 
-            this.ButtonValue4.Location = new System.Drawing.Point(10, 155);
+            this.ButtonValue4.Location = new System.Drawing.Point(12, 155);
             this.ButtonValue4.Name = "ButtonValue4";
             this.ButtonValue4.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue4.TabIndex = 5;
@@ -108,7 +110,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue5
             // 
-            this.ButtonValue5.Location = new System.Drawing.Point(91, 155);
+            this.ButtonValue5.Location = new System.Drawing.Point(93, 155);
             this.ButtonValue5.Name = "ButtonValue5";
             this.ButtonValue5.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue5.TabIndex = 6;
@@ -118,7 +120,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue6
             // 
-            this.ButtonValue6.Location = new System.Drawing.Point(172, 155);
+            this.ButtonValue6.Location = new System.Drawing.Point(174, 155);
             this.ButtonValue6.Name = "ButtonValue6";
             this.ButtonValue6.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue6.TabIndex = 7;
@@ -128,7 +130,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue7
             // 
-            this.ButtonValue7.Location = new System.Drawing.Point(10, 185);
+            this.ButtonValue7.Location = new System.Drawing.Point(12, 184);
             this.ButtonValue7.Name = "ButtonValue7";
             this.ButtonValue7.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue7.TabIndex = 8;
@@ -138,7 +140,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue8
             // 
-            this.ButtonValue8.Location = new System.Drawing.Point(92, 185);
+            this.ButtonValue8.Location = new System.Drawing.Point(93, 184);
             this.ButtonValue8.Name = "ButtonValue8";
             this.ButtonValue8.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue8.TabIndex = 9;
@@ -148,7 +150,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue9
             // 
-            this.ButtonValue9.Location = new System.Drawing.Point(174, 185);
+            this.ButtonValue9.Location = new System.Drawing.Point(174, 184);
             this.ButtonValue9.Name = "ButtonValue9";
             this.ButtonValue9.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue9.TabIndex = 10;
@@ -158,7 +160,7 @@ namespace Calculator_Forms
             // 
             // ButtonValue0
             // 
-            this.ButtonValue0.Location = new System.Drawing.Point(10, 215);
+            this.ButtonValue0.Location = new System.Drawing.Point(12, 215);
             this.ButtonValue0.Name = "ButtonValue0";
             this.ButtonValue0.Size = new System.Drawing.Size(75, 23);
             this.ButtonValue0.TabIndex = 11;
@@ -166,15 +168,15 @@ namespace Calculator_Forms
             this.ButtonValue0.UseVisualStyleBackColor = true;
             this.ButtonValue0.Click += new System.EventHandler(this.ButtonValue0_Click);
             // 
-            // ButtonValueComma
+            // ButtonPower
             // 
-            this.ButtonValueComma.Location = new System.Drawing.Point(92, 215);
-            this.ButtonValueComma.Name = "ButtonValueComma";
-            this.ButtonValueComma.Size = new System.Drawing.Size(75, 23);
-            this.ButtonValueComma.TabIndex = 12;
-            this.ButtonValueComma.Text = ",";
-            this.ButtonValueComma.UseVisualStyleBackColor = true;
-            this.ButtonValueComma.Click += new System.EventHandler(this.ButtonValueComma_Click);
+            this.ButtonPower.Location = new System.Drawing.Point(93, 97);
+            this.ButtonPower.Name = "ButtonPower";
+            this.ButtonPower.Size = new System.Drawing.Size(75, 23);
+            this.ButtonPower.TabIndex = 12;
+            this.ButtonPower.Text = "x^y";
+            this.ButtonPower.UseVisualStyleBackColor = true;
+            this.ButtonPower.Click += new System.EventHandler(this.ButtonValueComma_Click);
             // 
             // ButtonValueEquals
             // 
@@ -188,7 +190,7 @@ namespace Calculator_Forms
             // 
             // ButtonValueMultiply
             // 
-            this.ButtonValueMultiply.Location = new System.Drawing.Point(253, 156);
+            this.ButtonValueMultiply.Location = new System.Drawing.Point(255, 155);
             this.ButtonValueMultiply.Name = "ButtonValueMultiply";
             this.ButtonValueMultiply.Size = new System.Drawing.Size(75, 23);
             this.ButtonValueMultiply.TabIndex = 14;
@@ -198,7 +200,7 @@ namespace Calculator_Forms
             // 
             // ButtonValueSubtract
             // 
-            this.ButtonValueSubtract.Location = new System.Drawing.Point(253, 185);
+            this.ButtonValueSubtract.Location = new System.Drawing.Point(255, 186);
             this.ButtonValueSubtract.Name = "ButtonValueSubtract";
             this.ButtonValueSubtract.Size = new System.Drawing.Size(75, 23);
             this.ButtonValueSubtract.TabIndex = 15;
@@ -208,7 +210,7 @@ namespace Calculator_Forms
             // 
             // ButtonValueAdd
             // 
-            this.ButtonValueAdd.Location = new System.Drawing.Point(253, 215);
+            this.ButtonValueAdd.Location = new System.Drawing.Point(255, 215);
             this.ButtonValueAdd.Name = "ButtonValueAdd";
             this.ButtonValueAdd.Size = new System.Drawing.Size(75, 23);
             this.ButtonValueAdd.TabIndex = 16;
@@ -228,7 +230,7 @@ namespace Calculator_Forms
             // 
             // ButtonValueDeleteAll
             // 
-            this.ButtonValueDeleteAll.Location = new System.Drawing.Point(253, 97);
+            this.ButtonValueDeleteAll.Location = new System.Drawing.Point(255, 97);
             this.ButtonValueDeleteAll.Name = "ButtonValueDeleteAll";
             this.ButtonValueDeleteAll.Size = new System.Drawing.Size(75, 23);
             this.ButtonValueDeleteAll.TabIndex = 18;
@@ -238,7 +240,7 @@ namespace Calculator_Forms
             // 
             // ButtonValueRandom
             // 
-            this.ButtonValueRandom.Location = new System.Drawing.Point(91, 97);
+            this.ButtonValueRandom.Location = new System.Drawing.Point(93, 215);
             this.ButtonValueRandom.Name = "ButtonValueRandom";
             this.ButtonValueRandom.Size = new System.Drawing.Size(75, 23);
             this.ButtonValueRandom.TabIndex = 20;
@@ -249,7 +251,7 @@ namespace Calculator_Forms
             // 
             // ButtonValueSqrt
             // 
-            this.ButtonValueSqrt.Location = new System.Drawing.Point(172, 97);
+            this.ButtonValueSqrt.Location = new System.Drawing.Point(174, 97);
             this.ButtonValueSqrt.Name = "ButtonValueSqrt";
             this.ButtonValueSqrt.Size = new System.Drawing.Size(75, 23);
             this.ButtonValueSqrt.TabIndex = 23;
@@ -264,17 +266,17 @@ namespace Calculator_Forms
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(9, 254);
+            this.VersionLabel.Location = new System.Drawing.Point(9, 242);
             this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(89, 13);
+            this.VersionLabel.Size = new System.Drawing.Size(106, 13);
             this.VersionLabel.TabIndex = 25;
-            this.VersionLabel.Text = "\"Current Version\"";
+            this.VersionLabel.Text = "No Version Detected";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 276);
+            this.ClientSize = new System.Drawing.Size(340, 265);
             this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.ButtonValueSqrt);
             this.Controls.Add(this.ButtonValueRandom);
@@ -284,7 +286,7 @@ namespace Calculator_Forms
             this.Controls.Add(this.ButtonValueSubtract);
             this.Controls.Add(this.ButtonValueMultiply);
             this.Controls.Add(this.ButtonValueEquals);
-            this.Controls.Add(this.ButtonValueComma);
+            this.Controls.Add(this.ButtonPower);
             this.Controls.Add(this.ButtonValue0);
             this.Controls.Add(this.ButtonValue9);
             this.Controls.Add(this.ButtonValue8);
@@ -298,6 +300,7 @@ namespace Calculator_Forms
             this.Controls.Add(this.ButtonValue1);
             this.Controls.Add(this.ShowEvaluationBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Calculator";
             this.ResumeLayout(false);
@@ -328,7 +331,7 @@ namespace Calculator_Forms
         {
 
             // characters to seperate with the numerics
-            string[] operatorseperator = {"+", "-", "*", "/", "sqrt", "random"};
+            string[] operatorseperator = {"+", "-", "*", "/", "sqrt", "random", "^"};
 
             // Gets all of the operators in the equation
             string[] operators = Regex.Split(equation, "[0-9]");
@@ -340,55 +343,66 @@ namespace Calculator_Forms
 
             // to prevent a FormatException when an operator is set as the first character, for further functionality add another method for calculating with negative numerals
             if (!equation.StartsWith("-") || !equation.StartsWith("+") || !equation.StartsWith("/") ||
-                !equation.StartsWith("*") || !equation.StartsWith("random"))
+                !equation.StartsWith("*") || !equation.StartsWith("random") || !equation.StartsWith("^"))
             {
                 AdvancedCalculator calc = new AdvancedCalculator();
 
-                // Checks whether there are 1 or 2 numbers
-                if (numerics.Length <= 2 && numerics.Length != 0)
+                // Checks whether there are operators present
+                if (operators.Length != 0)
                 {
-                    // Assigns the numbers needed to calculate 
-                    calc.AssignFirstNumber(Convert.ToDouble(numerics[0]));
-
-                    // Checks if there are 2 numbers
-                    if (numerics.Length == 2)
-                        calc.AssignSecondNumber(Convert.ToDouble(numerics[1]));
-
-                    switch (operators[0])
+                    // Checks whether there are 1 or 2 numbers
+                    if (numerics.Length <= 2 && numerics.Length != 0)
                     {
-                        case "+":
-                            return
-                                calc.Addition()
-                                    .ToString(CultureInfo.CurrentCulture);
-                        case "-":
-                            return
-                                calc.Subtract()
-                                    .ToString(CultureInfo.CurrentCulture);
-                        case "/":
-                            return
-                                calc.Divide()
-                                    .ToString(CultureInfo.CurrentCulture);
-                        case "*":
-                            return
-                                calc.Multiply()
-                                    .ToString(CultureInfo.CurrentCulture);
-                        case "sqrt":
-                            return
-                                calc.SquareRoot()
-                                    .ToString(CultureInfo.CurrentCulture);
-                        case "random":
-                            return
-                                calc.Random()
-                                    .ToString(CultureInfo.CurrentCulture);
-                        default:
-                            return "Error in Calculation Please try again.";
+                        // Assigns the numbers needed to calculate 
+                        calc.AssignFirstNumber(Convert.ToDouble(numerics[0]));
+
+                        // Checks if there are 2 numbers
+                        if (numerics.Length == 2)
+                            calc.AssignSecondNumber(Convert.ToDouble(numerics[1]));
+
+                        switch (operators[0])
+                        {
+                            case "+":
+                                return
+                                    calc.Addition()
+                                        .ToString(CultureInfo.CurrentCulture);
+                            case "-":
+                                return
+                                    calc.Subtract()
+                                        .ToString(CultureInfo.CurrentCulture);
+                            case "/":
+                                return
+                                    calc.Divide()
+                                        .ToString(CultureInfo.CurrentCulture);
+                            case "*":
+                                return
+                                    calc.Multiply()
+                                        .ToString(CultureInfo.CurrentCulture);
+                            case "sqrt":
+                                return
+                                    calc.SquareRoot()
+                                        .ToString(CultureInfo.CurrentCulture);
+                            case "random":
+                                return
+                                    calc.Random()
+                                        .ToString(CultureInfo.CurrentCulture);
+                            case "^":
+                                return
+                                    calc.Power()
+                                        .ToString(CultureInfo.CurrentCulture);
+
+                            default:
+                                return "Error in Calculation Please try again.";
+                        }
+                    }
+                    else
+                    {
+                        return "Error in format";
                     }
                 }
-                else { return "Error in format"; }
             }
             return "Unknown error occured";
         }
-
 
         #region Winforms tools
         private void ButtonValue1_Click(object sender, EventArgs e)
@@ -443,7 +457,7 @@ namespace Calculator_Forms
 
         private void ButtonValueComma_Click(object sender, EventArgs e)
         {
-            ShowEvaluationBox.AppendText(".");
+            ShowEvaluationBox.AppendText("^");
         }
 
         private void ButtonValueEquals_Click(object sender, EventArgs e)
@@ -509,6 +523,7 @@ namespace Calculator_Forms
         {
             
         }
+
         #endregion
     }
 }
